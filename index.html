@@ -1,103 +1,122 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#0b1016"><title>ABS IN 90 — Next Level</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABS IN 90</title>
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b1016">
+
 <style>
-:root{--bg:#0b1016;--card:rgba(18,26,36,.92);--line:rgba(255,255,255,.08);--text:#f5f8fc;--muted:#9db0c6;--blue:#7cb4ff;--blue2:#4f8cff;--green:#59d39d;--red:#ff7676;--gold:#f3c654;--shadow:0 22px 60px rgba(0,0,0,.38)}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent} body{margin:0;padding:16px;max-width:900px;margin-inline:auto;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top left, rgba(79,140,255,.18), transparent 24%),radial-gradient(circle at top right, rgba(89,211,157,.10), transparent 22%),linear-gradient(180deg,#090d12 0%, #0b1016 100%)} h1,h2,h3,p{margin:0}
-.hero,.card{border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));backdrop-filter: blur(12px);box-shadow:var(--shadow)} .hero{border-radius:30px;padding:18px;margin-bottom:14px}.card{border-radius:26px;padding:16px;margin:14px 0}
-.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800}.title{margin-top:8px;font-size:34px;line-height:1;font-weight:900;letter-spacing:-.04em}.subtitle{margin-top:8px;color:var(--muted);line-height:1.45;font-size:14px}
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}.stat{background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));border:1px solid var(--line);border-radius:18px;padding:12px}.label{color:var(--muted);text-transform:uppercase;font-size:11px;letter-spacing:.1em}.value{margin-top:6px;font-size:24px;font-weight:900}
-.meter{margin-top:14px;height:12px;border-radius:999px;background:#0a1017;border:1px solid var(--line);overflow:hidden}.bar{height:100%;width:0%;background:linear-gradient(90deg,var(--blue2),var(--green))}
-.section{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.small{color:var(--muted);font-size:12px;line-height:1.4}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px;background:rgba(255,255,255,.02)}
-.alert{padding:12px 14px;border-radius:18px;border:1px solid rgba(255,118,118,.22);background:rgba(255,118,118,.08);color:#ffd4d4;font-size:13px;line-height:1.4;margin-bottom:10px}.ok{border-color:rgba(89,211,157,.22);background:rgba(89,211,157,.08);color:#cdf7e3}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.btn{width:100%;border:none;border-radius:18px;padding:14px;font-weight:900;font-size:15px;color:white;background:#182230;border:1px solid var(--line)}.primary{background:linear-gradient(135deg,#6caeff,#4f8cff)}.green{background:linear-gradient(135deg,#39c989,#21b879)}.red{background:linear-gradient(135deg,#d36767,#f07777)}.ghost{background:rgba(255,255,255,.02)}
-.item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02);margin-bottom:10px}.item-left{display:flex;align-items:center;gap:12px;min-width:0}.check{width:26px;height:26px;border-radius:9px;border:2px solid #4b5e76;background:#0e151d;display:grid;place-items:center;font-weight:900;flex:0 0 auto}.done .check{background:var(--green);border-color:var(--green)}.done .text{opacity:.7;text-decoration:line-through}.text{font-weight:800;line-height:1.25}.xp{color:var(--gold);font-size:12px;white-space:nowrap}
-select,input{width:100%;border:none;border-radius:16px;padding:13px 12px;background:#101721;border:1px solid var(--line);color:var(--text);font-size:16px}
-details{border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02);padding:12px} summary{cursor:pointer;font-weight:900}.exercise{padding:10px 0;border-bottom:1px solid var(--line)}.exercise:last-child{border-bottom:none}.exercise-head{display:flex;justify-content:space-between;gap:12px;font-weight:800}.muted{color:var(--muted)}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo-box{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#0e151d}.photo-top{padding:10px 12px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line)}.photo-stage{aspect-ratio:4/5;position:relative;background:linear-gradient(180deg,#0f151d,#0b1016);display:grid;place-items:center}.photo-stage img{width:100%;height:100%;object-fit:cover;display:none}.empty{text-align:center;color:var(--muted);font-size:13px;line-height:1.45;padding:18px}
-.badge{display:inline-block;padding:9px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.02);font-size:12px;margin:5px 6px 0 0}.earned{color:#dcf8eb;border-color:rgba(89,211,157,.3);background:rgba(89,211,157,.12)}.history{max-height:260px;overflow:auto}
-.coach{padding:14px;border-radius:18px;background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.18);line-height:1.45}.rings{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ringBox{padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02)}.ringTrack{height:10px;border-radius:999px;background:#0a1017;border:1px solid var(--line);overflow:hidden;margin-top:8px}.ringFill{height:100%;width:0%;background:linear-gradient(90deg,var(--blue2),var(--green))}
-@media (max-width:700px){.stats,.grid2,.grid3,.grid4,.photo-grid,.rings{grid-template-columns:1fr}.title{font-size:30px}}
-</style></head>
+body {
+  margin:0;
+  font-family:-apple-system;
+  background:#0b1016;
+  color:white;
+  text-align:center;
+}
+
+.container {
+  padding:20px;
+}
+
+h1 {
+  font-size:32px;
+}
+
+.card {
+  background:#121a24;
+  border-radius:16px;
+  padding:20px;
+  margin-top:20px;
+}
+
+button {
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  margin-top:10px;
+  width:100%;
+}
+
+.primary { background:#4f8cff; color:white; }
+.green { background:#21b879; color:white; }
+
+</style>
+</head>
+
 <body>
-<div class="hero"><div class="eyebrow">ABS IN 90 — NEXT LEVEL</div><div class="title">Tomorrow starts the cut.</div><div class="subtitle" id="heroSub">This app starts tomorrow. This first week is a 4-day ramp. Then it rolls into the full 12-week program.</div><div class="stats">
-<div class="stat"><div class="label">XP</div><div class="value" id="xpValue">0</div></div>
-<div class="stat"><div class="label">Streak</div><div class="value" id="streakValue">0</div></div>
-<div class="stat"><div class="label">Penalty</div><div class="value" id="penaltyValue">0</div></div>
-<div class="stat"><div class="label">Level</div><div class="value" id="levelValue">1</div></div>
-<div class="stat"><div class="label">Est. BF%</div><div class="value" id="bfValue">—</div></div></div>
-<div class="meter"><div class="bar" id="xpBar"></div></div></div>
 
-<div class="card"><div class="section"><h2>Today</h2><span class="pill" id="todayPill"></span></div><div id="statusBox"></div>
-<div class="rings">
-<div class="ringBox"><div class="small">Checklist</div><div style="font-size:22px;font-weight:900" id="checkPct">0%</div><div class="ringTrack"><div class="ringFill" id="checkBar"></div></div></div>
-<div class="ringBox"><div class="small">Water</div><div style="font-size:22px;font-weight:900" id="waterPct">0%</div><div class="ringTrack"><div class="ringFill" id="waterBar"></div></div></div>
-<div class="ringBox"><div class="small">Meals</div><div style="font-size:22px;font-weight:900" id="mealPct">0%</div><div class="ringTrack"><div class="ringFill" id="mealBar"></div></div></div>
-</div><div id="todayChecklist" style="margin-top:12px"></div>
-<div class="grid2" style="margin-top:8px"><button class="btn green" id="completeDayBtn">Complete Day</button><button class="btn red" id="resetDayBtn">Reset Today</button></div></div>
+<div class="container">
+  <h1>ABS IN 90</h1>
 
-<div class="card"><div class="section"><h2>Coach</h2><span class="small">Auto feedback</span></div><div class="coach" id="coachText">Open the app tomorrow morning and lock in Day 1.</div></div>
+  <div class="card">
+    <h2 id="dayText">Starting Tomorrow</h2>
+    <p id="coach">Get ready. Tomorrow we start.</p>
+    
+    <button class="primary" onclick="completeDay()">Complete Day</button>
+    <button class="green" onclick="addXP()">+10 XP</button>
+  </div>
 
-<div class="card"><div class="section"><h2>Program</h2><span class="small">Week 1 is a 4-day ramp. Then full 12-week schedule.</span></div>
-<div class="grid2"><div><div class="small" style="margin-bottom:6px">Week</div><select id="weekSelect"></select></div><div><div class="small" style="margin-bottom:6px">Training Day</div><select id="daySelect"></select></div></div><div id="workoutView" style="margin-top:12px"></div></div>
-
-<div class="grid2">
-<div class="card"><div class="section"><h2>Water</h2><span class="small">Goal: 128 oz</span></div><div class="item"><div><div class="muted">Today</div><div style="font-size:30px;font-weight:900"><span id="waterValue">0</span> oz</div></div><div class="grid2" style="width:180px"><button class="btn ghost" id="add16">+16</button><button class="btn ghost" id="add32">+32</button></div></div><button class="btn ghost" id="resetWaterBtn">Reset Water</button></div>
-<div class="card"><div class="section"><h2>Meals</h2><span class="small">Compliance only</span></div><div id="mealList"></div></div>
-</div>
-
-<div class="card"><div class="section"><h2>Progress Photos</h2><span class="small">Baseline vs latest</span></div>
-<div class="photo-grid">
-<div class="photo-box"><div class="photo-top">Baseline</div><div class="photo-stage"><img id="baselineImg" alt="Baseline photo"><div class="empty" id="baselineEmpty">Your first saved photo becomes the baseline.</div></div></div>
-<div class="photo-box"><div class="photo-top">Latest</div><div class="photo-stage"><img id="latestImg" alt="Latest photo"><div class="empty" id="latestEmpty">Your most recent saved photo shows here.</div></div></div>
-</div>
-<div class="grid2" style="margin-top:12px"><input type="file" id="photoInput" accept="image/*"><button class="btn primary" id="savePhotoBtn">Save Progress Photo</button></div>
-<div class="small" style="margin-top:10px">Same mirror, same lighting, same time of day, relaxed stance.</div></div>
-
-<div class="grid2">
-<div class="card"><div class="section"><h2>Check-Ins</h2><span class="small">Use 3x/week</span></div>
-<div class="grid4"><div><div class="small" style="margin-bottom:6px">Weight</div><input id="weightInput" placeholder="180.0"></div><div><div class="small" style="margin-bottom:6px">Waist</div><input id="waistInput" placeholder="34"></div><div><div class="small" style="margin-bottom:6px">Neck</div><input id="neckInput" placeholder="15"></div><div><div class="small" style="margin-bottom:6px">Notes</div><input id="notesInput" placeholder="leaner / flat / tired"></div></div>
-<div class="grid2" style="margin-top:10px"><button class="btn primary" id="saveCheckinBtn">Save Check-In</button><button class="btn ghost" id="exportBtn">Export Data</button></div>
-<div class="history" id="checkinHistory" style="margin-top:10px"></div></div>
-<div class="card"><div class="section"><h2>Badges</h2><span class="small">Earned automatically</span></div><div id="badgeList"></div><div id="penaltyNote" style="margin-top:10px"></div></div>
+  <div class="card">
+    <h2>Stats</h2>
+    <p>XP: <span id="xp">0</span></p>
+    <p>Streak: <span id="streak">0</span></p>
+  </div>
 </div>
 
 <script>
-const STORAGE_KEY="abs90_nextlevel_v1";
-const CHECKS=[{id:"wake",label:"Wake up at 6:00 AM",xp:5},{id:"workout",label:"Morning workout completed",xp:30},{id:"greens",label:"Greens supplement taken",xp:5},{id:"meal1",label:"Meal 1 completed (8:00 AM)",xp:5},{id:"meal2",label:"Meal 2 completed (12:30 PM)",xp:5},{id:"meal3",label:"Meal 3 completed (3:30 PM)",xp:5},{id:"meal4",label:"Meal 4 completed (7:00 PM)",xp:5},{id:"water",label:"128 oz water completed",xp:10},{id:"steps",label:"10,000 steps completed",xp:10},{id:"noliquid",label:"No liquid calories",xp:5},{id:"nightwalk",label:"Night walk completed",xp:5},{id:"sleep",label:"In bed by 10:30 PM",xp:5}];
-const MEALS=[{id:"m1",time:"8:00 AM",text:"4 eggs + toast or oatmeal + Greek yogurt + greens supplement"},{id:"m2",time:"12:30 PM",text:"6–8 oz chicken or steak + rice or potatoes"},{id:"m3",time:"3:30 PM",text:"Protein shake + almonds or peanut butter + fruit"},{id:"m4",time:"7:00 PM",text:"6–8 oz chicken, steak, or lean beef + rice or potatoes"}];
-const FULL_DAY_OPTIONS=[{v:"monday",t:"Monday – Upper + Abs"},{v:"tuesday",t:"Tuesday – Lower"},{v:"thursday",t:"Thursday – Full Body + Abs"},{v:"friday",t:"Friday – Conditioning + Core"}];
-const WORKOUTS={monday:{title:"Monday – Upper + Abs",items:[["DB Bench Press",["3 x 10–12","4 x 8–12","5 x 8–10"],"Lay flat, press up, lower for 3 seconds."],["One-Arm DB Row",["3 x 10/side","4 x 10/side","4 x 12/side"],"Hand and knee on bench, pull to hip."],["Seated Shoulder Press",["3 x 10","4 x 8–10","4 x 10"],"Sit tall, brace, press overhead."],["Lateral Raise",["3 x 15","4 x 12–15","4 x 15"],"Raise to shoulder height, controlled lowering."],["DB Curl",["3 x 12","4 x 10–12","4 x 12"],"No swinging."],["Overhead Triceps Extension",["3 x 12","4 x 10–12","4 x 12"],"Lower behind head, extend fully."],["Leg Raise",["3 x 12","4 x 12","4 x 15"],"Keep lower back down."],["Crunch",["3 x 20","4 x 20","4 x 25"],"Hard squeeze at top."],["Plank",["3 x 45 sec","3 x 60 sec","4 x 60 sec"],"Brace abs and glutes."]]},tuesday:{title:"Tuesday – Lower",items:[["Goblet Squat",["3 x 12","4 x 10–12","5 x 10"],"Hold dumbbell at chest, sit between hips."],["DB Romanian Deadlift",["3 x 10","4 x 10","4 x 12"],"Push hips back, stretch hamstrings."],["Bulgarian Split Squat",["3 x 10/leg","4 x 10/leg","4 x 12/leg"],"Back foot on bench, drop straight down."],["DB Calf Raise",["3 x 15","4 x 15","4 x 20"],"Pause at top, slow lower."],["Brisk Walk",["20 min","25 min","30 min"],"Steady pace after work or dinner."]]},thursday:{title:"Thursday – Full Body + Abs",items:[["DB Deadlift",["3 x 10","4 x 8–10","5 x 8"],"Hinge at hips, chest proud."],["Incline DB Press",["3 x 10","4 x 8–10","4 x 10"],"Slight incline bench."],["Reverse Lunge",["3 x 12/leg","4 x 10/leg","4 x 12/leg"],"Step back and stay tall."],["Renegade Row",["3 x 10/side","4 x 10/side","4 x 12/side"],"Plank on dumbbells, don’t twist."],["Reverse Crunch",["3 x 15","4 x 15","4 x 20"],"Tilt pelvis, don’t swing."],["Russian Twist",["3 x 20","4 x 20","4 x 24"],"Control both sides."],["Plank",["3 x 60 sec","3 x 60 sec","4 x 60 sec"],"Brace hard."]]},friday:{title:"Friday – Conditioning + Core",items:[["Circuit",["4 rounds","5 rounds","5 rounds + shorter rest"],"30 sec mountain climbers, 15 burpees, 20 bicycle crunches, 30–60 sec plank, 30–45 sec rest."],["Optional Walk",["20 min","25 min","30 min"],"Easy steady walk later in the day."]]}};
-const BADGES=[{label:"💧 Hydrated Beast",check:s=>s.stats.waterWins>=7},{label:"🏋️ No Skip King",check:s=>s.stats.workouts>=10},{label:"🔥 7-Day Streak",check:s=>s.streak>=7},{label:"🧊 14-Day Discipline",check:s=>s.streak>=14},{label:"📸 Progress Keeper",check:s=>(s.photos||[]).length>=3},{label:"👑 12-Week Finisher",check:s=>s.stats.completedDays>=84}];
-const isoDate=d=>d.toISOString().slice(0,10), todayISO=()=>isoDate(new Date()), tomorrowISO=()=>{let d=new Date();d.setDate(d.getDate()+1);return isoDate(d)}, fmtDate=iso=>new Date(iso+"T12:00:00").toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"}), phaseIndex=w=>w<=4?0:w<=8?1:2, currentLevel=xp=>xp<500?1:xp<1500?2:xp<3000?3:xp<5000?4:5;
-const daysBetween=(a,b)=>Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/(1000*60*60*24));
-function estimateBodyFat(waist,neck){const h=70;waist=parseFloat(waist);neck=parseFloat(neck);if(!waist||!neck||waist<=neck)return null;let bf=86.010*Math.log10(waist-neck)-70.041*Math.log10(h)+36.76;return Math.max(5,Math.min(40,bf))}
-function def(){return{startDate:tomorrowISO(),xp:0,streak:0,penaltyCount:0,lastCompletedDate:null,penaltyAppliedForDate:null,daily:{},meals:{},photos:[],checkins:[],stats:{waterWins:0,workouts:0,completedDays:0}}}
-let state;try{state=JSON.parse(localStorage.getItem(STORAGE_KEY))||def()}catch(e){state=def()}
-if(!state.startDate)state.startDate=tomorrowISO(); if(!state.photos)state.photos=[]; if(!state.checkins)state.checkins=[]; if(!state.meals)state.meals={}; if(!state.daily)state.daily={}; if(!state.stats)state.stats={waterWins:0,workouts:0,completedDays:0};
-const save=()=>localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); const getDaily=date=>(state.daily[date]||(state.daily[date]={checks:{},water:0,complete:false})); const getMealDay=date=>(state.meals[date]||(state.meals[date]={}));
-(function penalty(){const today=todayISO(); if(state.penaltyAppliedForDate===today||!state.lastCompletedDate) return; const gap=daysBetween(state.lastCompletedDate,today); if(gap>1){const missed=gap-1; state.xp=Math.max(0,state.xp-missed*40); state.streak=0; state.penaltyCount+=missed; state.penaltyAppliedForDate=today; save();}})();
-function renderHeader(){document.getElementById("xpValue").textContent=state.xp;document.getElementById("streakValue").textContent=state.streak;document.getElementById("penaltyValue").textContent=state.penaltyCount;document.getElementById("levelValue").textContent=currentLevel(state.xp);document.getElementById("todayPill").textContent=fmtDate(todayISO());document.getElementById("heroSub").textContent="This app starts "+fmtDate(state.startDate)+". This first week is a 4-day ramp. Then it rolls into the full 12-week program.";document.getElementById("xpBar").style.width=((state.xp%500)/500*100)+"%";const latest=state.checkins[state.checkins.length-1],bf=latest?estimateBodyFat(latest.waist,latest.neck):null;document.getElementById("bfValue").textContent=bf?bf.toFixed(1):"—"}
-function renderStatus(){const today=todayISO(),box=document.getElementById("statusBox"); if(today<state.startDate) box.innerHTML='<div class="alert ok">Pre-launch day. Your first tracked day is <b>'+fmtDate(state.startDate)+'</b>. Browse the workouts today. Tracking unlocks tomorrow.</div>'; else if(state.penaltyAppliedForDate===today&&state.penaltyCount>0) box.innerHTML='<div class="alert">Missed day penalty applied. Your streak reset and XP dropped. Open the app daily and hit <b>Complete Day</b>.</div>'; else box.innerHTML='<div class="alert ok">Live day. Hit the checklist, finish your water, finish your meals, then close it out with <b>Complete Day</b>.</div>'}
-function renderChecklist(){const today=todayISO(),daily=getDaily(today),wrap=document.getElementById("todayChecklist");wrap.innerHTML="";CHECKS.forEach(c=>{const on=!!daily.checks[c.id],row=document.createElement("div");row.className="item"+(on?" done":"");row.innerHTML='<div class="item-left"><div class="check">'+(on?'✓':'')+'</div><div class="text">'+c.label+'</div></div><div class="xp">+'+c.xp+' XP</div>';row.onclick=()=>{if(today<state.startDate)return;const cur=!!daily.checks[c.id];daily.checks[c.id]=!cur;state.xp+=cur?-c.xp:c.xp;if(c.id==="workout"&&!cur)state.stats.workouts+=1;if(c.id==="workout"&&cur)state.stats.workouts=Math.max(0,state.stats.workouts-1);save();renderAll()};wrap.appendChild(row)})}
-function fillWeekSelect(){const sel=document.getElementById("weekSelect");if(sel.options.length)return;for(let i=1;i<=12;i++){const o=document.createElement("option");o.value=i;o.textContent="Week "+i;sel.appendChild(o)}sel.value="1"}
-function dayOpts(week){return week===1?[{v:"monday",t:"Day 1 – Upper + Abs"},{v:"tuesday",t:"Day 2 – Lower"},{v:"thursday",t:"Day 3 – Full Body + Abs"},{v:"friday",t:"Day 4 – Conditioning + Core"}]:FULL_DAY_OPTIONS}
-function fillDaySelect(){const week=parseInt(document.getElementById("weekSelect").value,10),sel=document.getElementById("daySelect"),prev=sel.value||"monday";sel.innerHTML="";dayOpts(week).forEach(opt=>{const o=document.createElement("option");o.value=opt.v;o.textContent=opt.t;sel.appendChild(o)});if([...sel.options].some(x=>x.value===prev))sel.value=prev}
-function renderWorkout(){const week=parseInt(document.getElementById("weekSelect").value,10),phase=phaseIndex(week),day=document.getElementById("daySelect").value||"monday",data=WORKOUTS[day];let html='<details open><summary>'+data.title+' — Week '+week+'</summary>';data.items.forEach(ex=>html+='<div class="exercise"><div class="exercise-head"><span>'+ex[0]+'</span><span class="muted">'+ex[1][phase]+'</span></div><div class="small" style="margin-top:6px">'+ex[2]+'</div></div>');html+='</details>';document.getElementById("workoutView").innerHTML=html}
-function renderWater(){document.getElementById("waterValue").textContent=getDaily(todayISO()).water||0}
-function renderMeals(){const meals=getMealDay(todayISO()),wrap=document.getElementById("mealList");wrap.innerHTML="";MEALS.forEach(m=>{const done=!!meals[m.id],row=document.createElement("div");row.className="item"+(done?" done":"");row.innerHTML='<div class="item-left"><div class="check">'+(done?'✓':'')+'</div><div class="text">'+m.time+' — '+m.text+'</div></div><div class="xp">meal</div>';row.onclick=()=>{if(todayISO()<state.startDate)return;meals[m.id]=!done;save();renderAll()};wrap.appendChild(row)})}
-function renderPhotos(){const b=document.getElementById("baselineImg"),l=document.getElementById("latestImg"),be=document.getElementById("baselineEmpty"),le=document.getElementById("latestEmpty");if(state.photos.length){b.src=state.photos[0].data;l.src=state.photos[state.photos.length-1].data;b.style.display="block";l.style.display="block";be.style.display="none";le.style.display="none"}else{b.style.display="none";l.style.display="none";be.style.display="block";le.style.display="block"}}
-function renderCheckins(){const wrap=document.getElementById("checkinHistory");if(!state.checkins.length){wrap.innerHTML='<div class="small">No check-ins saved yet.</div>';return}wrap.innerHTML=state.checkins.slice().reverse().map(c=>{const bf=estimateBodyFat(c.waist,c.neck);return '<div class="item"><div><div class="text">'+c.date+'</div><div class="small">Weight: '+(c.weight||'-')+' • Waist: '+(c.waist||'-')+' • Neck: '+(c.neck||'-')+(bf?' • Est. BF%: '+bf.toFixed(1):'')+' • '+(c.notes||'')+'</div></div></div>'}).join("")}
-function renderBadges(){const wrap=document.getElementById("badgeList");wrap.innerHTML="";BADGES.forEach(b=>{const s=document.createElement("span");s.className="badge"+(b.check(state)?" earned":"");s.textContent=b.label;wrap.appendChild(s)});document.getElementById("penaltyNote").innerHTML=state.penaltyCount>0?'<div class="alert">Penalty count: <b>'+state.penaltyCount+'</b>. Miss a day and the app resets your streak and removes 40 XP per missed day.</div>':'<div class="small">No penalties yet. Keep that clean sheet.</div>'}
-function renderMeters(){const daily=getDaily(todayISO()),meals=getMealDay(todayISO()),checkDone=Object.values(daily.checks||{}).filter(Boolean).length,checkPct=Math.round(checkDone/CHECKS.length*100),waterPct=Math.min(100,Math.round((daily.water||0)/128*100)),mealDone=Object.values(meals).filter(Boolean).length,mealPct=Math.round(mealDone/MEALS.length*100);document.getElementById("checkPct").textContent=checkPct+"%";document.getElementById("waterPct").textContent=waterPct+"%";document.getElementById("mealPct").textContent=mealPct+"%";document.getElementById("checkBar").style.width=checkPct+"%";document.getElementById("waterBar").style.width=waterPct+"%";document.getElementById("mealBar").style.width=mealPct+"%"}
-function renderCoach(){const today=todayISO(),daily=getDaily(today),meals=getMealDay(today),checkDone=Object.values(daily.checks||{}).filter(Boolean).length,mealDone=Object.values(meals).filter(Boolean).length;let t="";if(today<state.startDate)t="Tomorrow is the first live day. Tonight, get to bed on time, set out your dumbbells, and make tomorrow automatic.";else if((daily.water||0)<64)t="You’re behind on water. Hit two quick +32 oz pushes and tighten up the rest of the day.";else if(!daily.checks.workout)t="Your workout is the anchor. Get it done first and the rest of the day gets easier.";else if(mealDone<4)t="Meals are where the abs show up. Keep meal compliance high and stop hunting for perfect foods.";else if(checkDone>=10)t="This is a strong day. Finish clean, hit Complete Day, and stack another streak win.";else t="Good start. Keep checking boxes and don’t let a decent day turn into a half day.";document.getElementById("coachText").textContent=t}
-function completeToday(){const today=todayISO();if(today<state.startDate)return;const daily=getDaily(today);if(daily.complete)return;daily.complete=true;state.xp+=50;state.stats.completedDays+=1;if((daily.water||0)>=128)state.stats.waterWins+=1;if(state.lastCompletedDate){const gap=daysBetween(state.lastCompletedDate,today);state.streak=gap===1?state.streak+1:1}else state.streak=1;state.lastCompletedDate=today;save();renderAll()}
-function resetToday(){const today=todayISO(),daily=getDaily(today);CHECKS.forEach(c=>{if(daily.checks[c.id])state.xp-=c.xp});if(daily.checks.workout)state.stats.workouts=Math.max(0,state.stats.workouts-1);if(daily.complete){state.xp=Math.max(0,state.xp-50);state.stats.completedDays=Math.max(0,state.stats.completedDays-1);if(state.lastCompletedDate===today){state.streak=Math.max(0,state.streak-1);state.lastCompletedDate=null}}state.daily[today]={checks:{},water:0,complete:false};state.meals[today]={};save();renderAll()}
-document.getElementById("add16").onclick=()=>{const d=getDaily(todayISO());d.water=(d.water||0)+16;save();renderAll()}; document.getElementById("add32").onclick=()=>{const d=getDaily(todayISO());d.water=(d.water||0)+32;save();renderAll()}; document.getElementById("resetWaterBtn").onclick=()=>{const d=getDaily(todayISO());d.water=0;save();renderAll()};
-document.getElementById("completeDayBtn").onclick=completeToday; document.getElementById("resetDayBtn").onclick=resetToday;
-document.getElementById("savePhotoBtn").onclick=()=>{const input=document.getElementById("photoInput"),file=input.files&&input.files[0];if(!file)return;const r=new FileReader();r.onload=e=>{state.photos.push({date:todayISO(),data:e.target.result});save();renderAll();input.value=""};r.readAsDataURL(file)};
-document.getElementById("saveCheckinBtn").onclick=()=>{state.checkins.push({date:fmtDate(todayISO()),weight:document.getElementById("weightInput").value.trim(),waist:document.getElementById("waistInput").value.trim(),neck:document.getElementById("neckInput").value.trim(),notes:document.getElementById("notesInput").value.trim()});["weightInput","waistInput","neckInput","notesInput"].forEach(id=>document.getElementById(id).value="");save();renderAll()};
-document.getElementById("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="abs-in-90-next-level-data.json";a.click()};
-document.getElementById("weekSelect").onchange=()=>{fillDaySelect();renderWorkout()}; document.getElementById("daySelect").onchange=renderWorkout;
-fillWeekSelect(); fillDaySelect(); function renderAll(){renderHeader();renderStatus();renderChecklist();renderMeters();renderCoach();renderWater();renderMeals();renderPhotos();renderCheckins();renderBadges();fillDaySelect();renderWorkout()} renderAll();
-</script></body></html>
+let state = JSON.parse(localStorage.getItem("abs")) || {
+  start: new Date(Date.now() + 86400000).toDateString(),
+  xp: 0,
+  streak: 0,
+  last: null
+};
+
+function save() {
+  localStorage.setItem("abs", JSON.stringify(state));
+}
+
+function render() {
+  document.getElementById("xp").innerText = state.xp;
+  document.getElementById("streak").innerText = state.streak;
+
+  let today = new Date().toDateString();
+
+  if (today < state.start) {
+    document.getElementById("dayText").innerText = "Starting Tomorrow";
+  } else {
+    document.getElementById("dayText").innerText = "Day Active";
+  }
+}
+
+function completeDay() {
+  let today = new Date().toDateString();
+
+  if (state.last !== today) {
+    state.streak += 1;
+    state.xp += 50;
+    state.last = today;
+  }
+
+  save();
+  render();
+}
+
+function addXP() {
+  state.xp += 10;
+  save();
+  render();
+}
+
+render();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
